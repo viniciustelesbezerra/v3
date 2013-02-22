@@ -1,4 +1,6 @@
 Evorav3::Application.routes.draw do
+  devise_for :users
+
   root :to => 'application#index'
 
   # See how all your routes lay out with "rake routes"
