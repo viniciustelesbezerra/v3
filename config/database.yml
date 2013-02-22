@@ -51,14 +51,3 @@ test:
   username: root
   password: root
   #template: template0
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: evorav3_production
-  pool: 5
-  host: localhost
-  port: 5432
-  username: root
-  password: root
-  #template: template0
