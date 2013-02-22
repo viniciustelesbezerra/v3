@@ -1,21 +1,19 @@
-<%= link_to "Evorav3", root_path, :class => 'brand' %>
-<ul class="nav">
+<%= link_to "Evorav3", root_path, class: 'brand' %>
+<ul class="inline">
   <% if user_signed_in? %>
     <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+    <%#= link_to 'Logout', destroy_user_session_path, class: 'btn', method: 'delete' %>
+    <a href="/users/sign_out" class="btn" data-method="delete" rel="nofollow">
+      <i class="icon-off"></i>Logout</a>
+    <%#= link_to 'Edit account', edit_user_registration_path, class: 'btn' %>
+    <a href="/users/edit" class="btn"><i class="icon-wrench"></i>Edit account</a>
     </li>
   <% else %>
     <li>
-    <%= link_to 'Login', new_user_session_path %>
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Edit account', edit_user_registration_path %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
+    <%#= link_to 'Login', new_user_session_path, class: 'btn' %>
+    <a href="/users/sign_in" class="btn"><i class="icon-user"></i>Login</a>
+    <%#= link_to 'Sign up', new_user_registration_path, class: 'btn' %>
+    <a href="/users/sign_up" class="btn"><i class="icon-pencil"></i>Sign up</a>
     </li>
   <% end %>
 </ul>
