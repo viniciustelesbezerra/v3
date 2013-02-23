@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @arquivo.tipo %>
+</p>
+
+<p>
+  <b>Em uso:</b>
+  <%= @arquivo.em_uso %>
+</p>
+
+<p>
+  <b>Carregado evora:</b>
+  <%= @arquivo.carregado_evora %>
+</p>
+
+<p>
+  <b>Data carregado evora:</b>
+  <%= @arquivo.data_carregado_evora %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @arquivo.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_arquivo_path(@arquivo) %> |
+<%= link_to 'Back', arquivos_path %>

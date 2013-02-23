@@ -1,0 +1,29 @@
+<h1>Listing lpus</h1>
+
+<table>
+  <tr>
+    <th>Provedor</th>
+    <th>Carregado evora</th>
+    <th>Data carregado evora</th>
+    <th>Arquivo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lpus.each do |lpu| %>
+  <tr>
+    <td><%= lpu.provedor %></td>
+    <td><%= lpu.carregado_evora %></td>
+    <td><%= lpu.data_carregado_evora %></td>
+    <td><%= lpu.arquivo %></td>
+    <td><%= link_to 'Show', lpu %></td>
+    <td><%= link_to 'Edit', edit_lpu_path(lpu) %></td>
+    <td><%= link_to 'Destroy', lpu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lpu', new_lpu_path %>

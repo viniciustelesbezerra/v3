@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223012811) do
+ActiveRecord::Schema.define(:version => 20130223173833) do
+
+  create_table "arquivos", :force => true do |t|
+    t.string   "tipo",                 :limit => 1
+    t.boolean  "em_uso",                            :default => false
+    t.boolean  "carregado_evora",                   :default => false
+    t.datetime "data_carregado_evora"
+    t.integer  "user_id"
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
+  end
+
+  add_index "arquivos", ["user_id"], :name => "index_arquivos_on_user_id"
+
+  create_table "lpus", :force => true do |t|
+    t.string   "provedor"
+    t.boolean  "carregado_evora",      :default => false
+    t.datetime "data_carregado_evora"
+    t.integer  "arquivo_id"
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
+  end
+
+  add_index "lpus", ["arquivo_id"], :name => "index_lpus_on_arquivo_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

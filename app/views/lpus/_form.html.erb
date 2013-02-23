@@ -1,0 +1,33 @@
+<%= form_for(@lpu) do |f| %>
+  <% if @lpu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lpu.errors.count, "error") %> prohibited this lpu from being saved:</h2>
+
+      <ul>
+      <% @lpu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :provedor %><br />
+    <%= f.text_field :provedor %>
+  </div>
+  <div class="field">
+    <%= f.label :carregado_evora %><br />
+    <%= f.check_box :carregado_evora %>
+  </div>
+  <div class="field">
+    <%= f.label :data_carregado_evora %><br />
+    <%= f.datetime_select :data_carregado_evora %>
+  </div>
+  <div class="field">
+    <%= f.label :arquivo %><br />
+    <%= f.text_field :arquivo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

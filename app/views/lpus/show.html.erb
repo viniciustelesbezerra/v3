@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Provedor:</b>
+  <%= @lpu.provedor %>
+</p>
+
+<p>
+  <b>Carregado evora:</b>
+  <%= @lpu.carregado_evora %>
+</p>
+
+<p>
+  <b>Data carregado evora:</b>
+  <%= @lpu.data_carregado_evora %>
+</p>
+
+<p>
+  <b>Arquivo:</b>
+  <%= @lpu.arquivo %>
+</p>
+
+
+<%= link_to 'Edit', edit_lpu_path(@lpu) %> |
+<%= link_to 'Back', lpus_path %>

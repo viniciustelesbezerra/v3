@@ -1,4 +1,10 @@
 Evorav3::Application.routes.draw do
+  resources :lpus
+
+
+  resources :arquivos
+
+
   devise_for :users
 
   root to: 'application#index'
