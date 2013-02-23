@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 	before_filter :authenticate_user!
 
   	def index
-  		@index = "Index Page"
+  		@index = "Welcome to EvoraV3"
   	end
 
   	private
