@@ -1,0 +1,41 @@
+<h3><i>Arquivos</i></h3>
+<table class="table table-hover">
+  <tr>
+    <th>Tipo</th>
+    <th>Em uso</th>
+    <th>Carregado evora</th>
+    <th>Data carregado evora</th>
+    <th>User</th>
+  </tr>
+
+<% @arquivos_presenter.report_arquivos.each do |arquivo| %> 
+  <tr>
+    <td><%= arquivo.tipo %></td>
+    <td><%= arquivo.em_uso %></td>
+    <td><%= arquivo.carregado_evora %></td>
+    <td><%= arquivo.data_carregado_evora %></td>
+    <td><%= arquivo.user.name %></td>
+  </tr>
+<% end %>
+</table>
+
+<hr />
+
+<h3><i>Lpus</i></h3>
+<table class="table table-hover">
+  <tr>
+    <th>Provedor</th>
+    <th>Carregado evora</th>
+    <th>Data carregado evora</th>
+    <th>Arquivo</th>
+  </tr>
+
+<% @lpus_presenter.report_lpus.each do |lpu| %>
+  <tr>
+    <td><%= lpu.provedor %></td>
+    <td><%= lpu.carregado_evora %></td>
+    <td><%= lpu.data_carregado_evora %></td>
+    <td><%= lpu.arquivo.tipo %></td>
+  </tr>
+<% end %>
+</table>

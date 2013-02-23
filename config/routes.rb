@@ -6,6 +6,8 @@ Evorav3::Application.routes.draw do
   devise_for :users
 
   root to: 'application#index'
+  
+  match 'reports' => 'reports#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,8 +1,10 @@
 class LpusController < ApplicationController
+  before_filter :have_to_be_admin
+
   # GET /lpus
   # GET /lpus.json
   def index
-    @lpus = Lpu.all
+    @lpus = Lpu.includes(:arquivo).all
 
     respond_to do |format|
       format.html # index.html.erb

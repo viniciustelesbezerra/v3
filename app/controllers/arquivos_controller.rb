@@ -1,13 +1,10 @@
 class ArquivosController < ApplicationController
+  before_filter :have_to_be_admin
+
   # GET /arquivos
   # GET /arquivos.json
   def index
-    @arquivos = Arquivo.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @arquivos }
-    end
+    @arquivos = Arquivo.includes(:user).all
   end
 
   # GET /arquivos/1
