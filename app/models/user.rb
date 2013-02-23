@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
   attr_protected :admin
 
+  validates_presence_of :email, :encrypted_password, :name
+
 end
