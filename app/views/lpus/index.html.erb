@@ -1,6 +1,6 @@
-<h1>Listing lpus</h1>
+<h1>Lpus</h1>
 
-<table>
+<table class="table table-hover">
   <tr>
     <th>Provedor</th>
     <th>Carregado evora</th>
@@ -16,7 +16,7 @@
     <td><%= lpu.provedor %></td>
     <td><%= lpu.carregado_evora %></td>
     <td><%= lpu.data_carregado_evora %></td>
-    <td><%= lpu.arquivo %></td>
+    <td><%= lpu.arquivo.tipo %></td>
     <td><%= link_to 'Show', lpu %></td>
     <td><%= link_to 'Edit', edit_lpu_path(lpu) %></td>
     <td><%= link_to 'Destroy', lpu, method: :delete, data: { confirm: 'Are you sure?' } %></td>

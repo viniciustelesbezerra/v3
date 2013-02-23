@@ -12,26 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :tipo %><br />
+    <%= f.label :tipo %>
     <%= f.text_field :tipo %>
   </div>
   <div class="field">
-    <%= f.label :em_uso %><br />
+    <%= f.label :em_uso %>
     <%= f.check_box :em_uso %>
   </div>
   <div class="field">
-    <%= f.label :carregado_evora %><br />
+    <%= f.label :carregado_evora %>
     <%= f.check_box :carregado_evora %>
   </div>
   <div class="field">
-    <%= f.label :data_carregado_evora %><br />
+    <%= f.label :data_carregado_evora %>
     <%= f.datetime_select :data_carregado_evora %>
   </div>
   <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%#= f.label :user %>
+    <%#= f.text_field :user %>
   </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="actions">
-    <%= f.submit %>
+    <div><input name="commit" type="submit" value="Create Arquivo" class="btn btn-primary"></div>
+    <%#= f.submit %>
   </div>
 <% end %>

@@ -12,22 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :provedor %><br />
+    <%= f.label :provedor %>
     <%= f.text_field :provedor %>
   </div>
   <div class="field">
-    <%= f.label :carregado_evora %><br />
+    <%= f.label :carregado_evora %>
     <%= f.check_box :carregado_evora %>
   </div>
   <div class="field">
-    <%= f.label :data_carregado_evora %><br />
+    <%= f.label :data_carregado_evora %>
     <%= f.datetime_select :data_carregado_evora %>
   </div>
   <div class="field">
-    <%= f.label :arquivo %><br />
-    <%= f.text_field :arquivo %>
+    <%#= f.label :arquivo %>
+    <%#= f.text_field :arquivo %>
   </div>
+  <%= f.hidden_field :arquivo_id, value: current_user.id %>
   <div class="actions">
-    <%= f.submit %>
+    <div><input name="commit" type="submit" value="Create Lpu" class="btn btn-primary"></div>
+    <%#= f.submit %>
   </div>
 <% end %>

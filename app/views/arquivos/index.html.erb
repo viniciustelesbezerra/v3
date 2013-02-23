@@ -1,6 +1,6 @@
-<h1>Listing arquivos</h1>
+<h1>Arquivos</h1>
 
-<table>
+<table class="table table-hover">
   <tr>
     <th>Tipo</th>
     <th>Em uso</th>
@@ -18,7 +18,7 @@
     <td><%= arquivo.em_uso %></td>
     <td><%= arquivo.carregado_evora %></td>
     <td><%= arquivo.data_carregado_evora %></td>
-    <td><%= arquivo.user %></td>
+    <td><%= arquivo.user.name %></td>
     <td><%= link_to 'Show', arquivo %></td>
     <td><%= link_to 'Edit', edit_arquivo_path(arquivo) %></td>
     <td><%= link_to 'Destroy', arquivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
