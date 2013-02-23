@@ -6,6 +6,7 @@
     <th>Carregado evora</th>
     <th>Data carregado evora</th>
     <th>User</th>
+    <th>File</th>
   </tr>
 
 <% @arquivos_presenter.report_arquivos.each do |arquivo| %> 
@@ -15,6 +16,7 @@
     <td><%= arquivo.carregado_evora %></td>
     <td><%= arquivo.data_carregado_evora %></td>
     <td><%= arquivo.user.name %></td>
+    <td><%= arquivo.image_url.to_s %></td>
   </tr>
 <% end %>
 </table>

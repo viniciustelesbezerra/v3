@@ -7,7 +7,7 @@
     <th>Carregado evora</th>
     <th>Data carregado evora</th>
     <th>User</th>
-    <th></th>
+    <th>File</th>
     <th></th>
     <th></th>
   </tr>
@@ -19,6 +19,7 @@
     <td><%= arquivo.carregado_evora %></td>
     <td><%= arquivo.data_carregado_evora %></td>
     <td><%= arquivo.user.name %></td>
+    <td><%= arquivo.image_url.to_s %></td>
     <td><%= link_to 'Show', arquivo %></td>
     <td><%= link_to 'Edit', edit_arquivo_path(arquivo) %></td>
     <td><%= link_to 'Destroy', arquivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -23,6 +23,10 @@
   <%= @arquivo.user.name %>
 </p>
 
+<p>
+  <b>File:</b>
+  <%= @arquivo.image_url.to_s %>
+</p>
 
 <%= link_to 'Edit', edit_arquivo_path(@arquivo) %> |
 <%= link_to 'Back', arquivos_path %>
