@@ -1,87 +1,46 @@
 class ContratosController < ApplicationController
-  # GET /contratos
-  # GET /contratos.json
-  def index
-    @contratos = Contrato.all
+    before_filter :have_to_be_admin
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @contratos }
+    def index
+        @contratos = Contrato.all
     end
-  end
 
-  # GET /contratos/1
-  # GET /contratos/1.json
-  def show
-    @contrato = Contrato.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @contrato }
+    def show
+        @contrato = Contrato.find(params[:id])
     end
-  end
 
-  # GET /contratos/new
-  # GET /contratos/new.json
-  def new
-    @contrato = Contrato.new#ufs: Uf.new
-    Uf.count.times { 
-      @contrato.ufs.build
-      @contrato.abrangencias.build
-    }
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @contrato }
+    def new
+        @contrato = Contrato.new
     end
-  end
 
-  # GET /contratos/1/edit
-  def edit
-    @contrato = Contrato.find(params[:id])
-  end
-
-  # POST /contratos
-  # POST /contratos.json
-  def create
-    @contrato = Contrato.new(params[:contrato])
-
-    respond_to do |format|
-      if @contrato.save
-        format.html { redirect_to @contrato, notice: 'Contrato was successfully created.' }
-        format.json { render json: @contrato, status: :created, location: @contrato }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @contrato.errors, status: :unprocessable_entity }
-      end
+    def edit
+        @contrato = Contrato.find(params[:id])
     end
-  end
 
-  # PUT /contratos/1
-  # PUT /contratos/1.json
-  def update
-    @contrato = Contrato.find(params[:id])
+    def create
+        @contrato = Contrato.new(params[:contrato])
+        if @contrato.save
+            @contrato.create_ufs_relation!(params[:ufs][:id])
+            flash[:notice] = 'Contrato was successfully created.'
+        end
 
-    respond_to do |format|
-      if @contrato.update_attributes(params[:contrato])
-        format.html { redirect_to @contrato, notice: 'Contrato was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @contrato.errors, status: :unprocessable_entity }
-      end
+        respond_with(@contrato)
     end
-  end
 
-  # DELETE /contratos/1
-  # DELETE /contratos/1.json
-  def destroy
-    @contrato = Contrato.find(params[:id])
-    @contrato.destroy
+    def update
+        @contrato = Contrato.find(params[:id])
+        if @contrato.update_attributes(params[:contrato])
+            @contrato.update_ufs_relation!(params[:ufs][:id])
+            flash[:notice] = 'Contrato was successfully updated.'
+        end
 
-    respond_to do |format|
-      format.html { redirect_to contratos_url }
-      format.json { head :no_content }
+        respond_with(@contrato)
     end
-  end
+
+    def destroy
+        @contrato = Contrato.find(params[:id])
+        flash[:notice] = 'Contrato was successfully destroyed.' if @contrato.destroy
+        respond_with(@contrato) 
+    end
+
 end

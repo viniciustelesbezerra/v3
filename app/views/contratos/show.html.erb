@@ -9,10 +9,16 @@
 </p>
 
 <p>
-  <b>Comprador responsavel:</b>
-  <%= @contrato.comprador_responsavel %>
+  	<b>Comprador responsavel:</b>
+  	<%= @contrato.comprador_responsavel %>
 </p>
 
+<p>
+	<b>Ufs:</b><br />
+	<% @contrato.ufs.find_each do |ufs| %>
+		Name: <%= ufs.name %>
+	<% end %>
+</p>
 
 <%= link_to 'Edit', edit_contrato_path(@contrato) %> |
 <%= link_to 'Back', contratos_path %>

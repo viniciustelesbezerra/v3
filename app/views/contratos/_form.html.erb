@@ -24,10 +24,8 @@
     <%= f.text_field :comprador_responsavel %>
   </div>
 
-  <label>Ufs</label>
-
   <% Uf.find_each do |uf| %>
-    <%= check_box_tag "contrato[ufs_attributes][id][]", uf.id, @contrato.ufs.include?(uf) %>
+    <%= check_box_tag "ufs[id][]", uf.id, @contrato.ufs.include?(uf) %>
     <%= uf.name %> 
   <% end %>
 
