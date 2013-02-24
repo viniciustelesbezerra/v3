@@ -1,0 +1,18 @@
+<p>
+  <b>Numero:</b>
+  <%= @contrato.numero %>
+</p>
+
+<p>
+  <b>Fornecedor:</b>
+  <%= @contrato.fornecedor %>
+</p>
+
+<p>
+  <b>Comprador responsavel:</b>
+  <%= @contrato.comprador_responsavel %>
+</p>
+
+
+<%= link_to 'Edit', edit_contrato_path(@contrato) %> |
+<%= link_to 'Back', contratos_path %>

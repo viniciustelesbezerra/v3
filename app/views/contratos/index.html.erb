@@ -1,0 +1,27 @@
+<h1>Contratos</h1>
+
+<table class="table table-hover">
+  <tr>
+    <th>Numero</th>
+    <th>Fornecedor</th>
+    <th>Comprador responsavel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contratos.each do |contrato| %>
+  <tr>
+    <td><%= contrato.numero %></td>
+    <td><%= contrato.fornecedor %></td>
+    <td><%= contrato.comprador_responsavel %></td>
+    <td><%= link_to 'Show', contrato %></td>
+    <td><%= link_to 'Edit', edit_contrato_path(contrato) %></td>
+    <td><%= link_to 'Destroy', contrato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contrato', new_contrato_path %>

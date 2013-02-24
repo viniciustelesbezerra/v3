@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223200131) do
+ActiveRecord::Schema.define(:version => 20130223235902) do
+
+  create_table "abrangencia", :force => true do |t|
+    t.integer  "contrato_id"
+    t.integer  "uf_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "abrangencia", ["contrato_id"], :name => "index_abrangencia_on_contrato_id"
+  add_index "abrangencia", ["uf_id"], :name => "index_abrangencia_on_uf_id"
 
   create_table "arquivos", :force => true do |t|
     t.string   "tipo",                 :limit => 1
@@ -26,6 +36,14 @@ ActiveRecord::Schema.define(:version => 20130223200131) do
 
   add_index "arquivos", ["user_id"], :name => "index_arquivos_on_user_id"
 
+  create_table "contratos", :force => true do |t|
+    t.integer  "numero",                :null => false
+    t.string   "fornecedor",            :null => false
+    t.string   "comprador_responsavel", :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
+
   create_table "lpus", :force => true do |t|
     t.string   "provedor"
     t.boolean  "carregado_evora",      :default => false
@@ -36,6 +54,12 @@ ActiveRecord::Schema.define(:version => 20130223200131) do
   end
 
   add_index "lpus", ["arquivo_id"], :name => "index_lpus_on_arquivo_id"
+
+  create_table "ufs", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

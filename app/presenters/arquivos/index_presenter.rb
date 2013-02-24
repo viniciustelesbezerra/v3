@@ -1,11 +1,12 @@
 class Arquivos::IndexPresenter
 	extend ActiveSupport::Memoizable
 
-	#def initialize
-	#end
+	def initialize(params_arquivos)
+		@params_arquivos = params_arquivos
+	end
 
 	def report_arquivos
-		Arquivo.includes(:user).all
+		Arquivo.search(@params_arquivos)
 	end
 
 	memoize :report_arquivos

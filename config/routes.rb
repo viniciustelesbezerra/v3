@@ -1,4 +1,10 @@
 Evorav3::Application.routes.draw do
+  resources :ufs
+
+
+  resources :contratos
+
+
   resources :lpus
 
   resources :arquivos
