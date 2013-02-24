@@ -16,7 +16,6 @@ class Contrato < ActiveRecord::Base
         	@relation = @contrato_ufs.find(ids_to_delete)
         	@contrato_ufs.delete(@relation)
       	end
-
 	end
 
 end

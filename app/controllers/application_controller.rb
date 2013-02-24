@@ -8,9 +8,8 @@ class ApplicationController < ActionController::Base
   	end
 
   	private
-
   	def have_to_be_admin
-  		(redirect_to(root_path, alert: "Not allowed yet") unless current_user.admin?) if current_user
+  	    (redirect_to(root_path, alert: "Not allowed yet") unless current_user.admin?) if current_user
   	end
 
 end

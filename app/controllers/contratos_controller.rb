@@ -6,7 +6,7 @@ class ContratosController < ApplicationController
     end
 
     def show
-        @contrato = Contrato.find(params[:id])
+        @contrato = get_contrato(params[:id])
     end
 
     def new
@@ -14,7 +14,7 @@ class ContratosController < ApplicationController
     end
 
     def edit
-        @contrato = Contrato.find(params[:id])
+        @contrato = get_contrato(params[:id])
     end
 
     def create
@@ -23,24 +23,27 @@ class ContratosController < ApplicationController
             @contrato.create_ufs_relation!(params[:ufs][:id])
             flash[:notice] = 'Contrato was successfully created.'
         end
-
         respond_with(@contrato)
     end
 
     def update
-        @contrato = Contrato.find(params[:id])
+        @contrato = get_contrato(params[:id])
         if @contrato.update_attributes(params[:contrato])
             @contrato.update_ufs_relation!(params[:ufs][:id])
             flash[:notice] = 'Contrato was successfully updated.'
         end
-
         respond_with(@contrato)
     end
 
     def destroy
-        @contrato = Contrato.find(params[:id])
+        @contrato = get_contrato(params[:id])
         flash[:notice] = 'Contrato was successfully destroyed.' if @contrato.destroy
         respond_with(@contrato) 
+    end
+
+    private
+    def get_contrato(id)
+        Contrato.find(id)
     end
 
 end
