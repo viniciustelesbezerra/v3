@@ -24,10 +24,12 @@
     <%= f.datetime_select :data_carregado_evora %>
   </div>
   <div class="field">
-    <%#= f.label :arquivo %>
-    <%#= f.text_field :arquivo %>
+    <%= f.label :arquivo %>
+    <%= select("lpu", "arquivo_id", 
+      Arquivo.all.map { |arquivo| [arquivo.image, arquivo.id] }, { :include_blank => true }) %>
   </div>
-  <%= f.hidden_field :arquivo_id, value: current_user.id %>
+
+  <%#= f.hidden_field :arquivo_id, value: current_user.id %>
   <div class="actions">
     <div><input name="commit" type="submit" value="Submit" class="btn btn-primary"></div>
     <%#= f.submit %>
