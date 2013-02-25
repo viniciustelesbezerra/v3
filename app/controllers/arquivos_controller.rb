@@ -19,19 +19,19 @@ class ArquivosController < ApplicationController
 
     def create
         @arquivo = Arquivo.new(params[:arquivo])
-        flash[:notice] = 'Arquivo was successfully created.' if @arquivo.save
+        set_flash_message('Arquivo was successfully created.','notice') if @arquivo.save
         respond_with(@arquivo)
     end
 
     def update
         @arquivo = get_arquivo(params[:id])
-        flash[:notice] = 'Arquivo was successfully updated.' if @arquivo.update_attributes(params[:arquivo])
+        set_flash_message('Arquivo was successfully updated.','notice') if @arquivo.update_attributes(params[:arquivo])
         respond_with(@arquivo)
     end
 
     def destroy
         @arquivo = get_arquivo(params[:id])
-        flash[:notice] = 'Arquivo was successfully destroyed.' if @arquivo.destroy
+        set_flash_message('Arquivo was successfully destroyed.','notice') if @arquivo.destroy
         respond_with(@arquivo)
     end
     

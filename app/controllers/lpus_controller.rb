@@ -19,19 +19,19 @@ class LpusController < ApplicationController
 
     def create
         @lpu = Lpu.new(params[:lpu])
-        flash[:notice] = 'Lpu was successfully created.' if @lpu.save
+        set_flash_message('Lpu was successfully created.','notice') if @lpu.save
         respond_with(@lpu)
     end
 
     def update
         @lpu = get_lpu(params[:id])
-        flash[:notice] = 'Lpu was successfully updated.' if @lpu.update_attributes(params[:lpu])
+        set_flash_message('Lpu was successfully updated.','notice') if @lpu.update_attributes(params[:lpu])
         respond_with(@lpu)
     end
 
     def destroy
         @lpu = get_lpu(params[:id])
-        flash[:notice] = 'Lpu was successfully destroyed.' if @lpu.destroy
+        set_flash_message('Lpu was successfully destroyed.','notice')  if @lpu.destroy
         respond_with(@lpu)
     end
 

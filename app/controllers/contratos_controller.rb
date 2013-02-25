@@ -21,7 +21,7 @@ class ContratosController < ApplicationController
         @contrato = Contrato.new(params[:contrato])
         if @contrato.save
             @contrato.create_ufs_relation!(params[:ufs][:id])
-            flash[:notice] = 'Contrato was successfully created.'
+            set_flash_message('Contrato was successfully created.','notice')
         end
         respond_with(@contrato)
     end
@@ -30,14 +30,14 @@ class ContratosController < ApplicationController
         @contrato = get_contrato(params[:id])
         if @contrato.update_attributes(params[:contrato])
             @contrato.update_ufs_relation!(params[:ufs][:id])
-            flash[:notice] = 'Contrato was successfully updated.'
+            set_flash_message('Contrato was successfully updated.','notice')
         end
         respond_with(@contrato)
     end
 
     def destroy
         @contrato = get_contrato(params[:id])
-        flash[:notice] = 'Contrato was successfully destroyed.' if @contrato.destroy
+        set_flash_message('Contrato was successfully destroyed.','notice') if @contrato.destroy
         respond_with(@contrato) 
     end
 

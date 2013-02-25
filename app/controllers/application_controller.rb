@@ -1,15 +1,19 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
 	before_filter :authenticate_user!
-  	respond_to :html, :json
+    respond_to :html, :json
 	
   	def index
-  		@index = "Welcome to EvoraV3"
+  		@index = "EvoraV3."
   	end
 
   	private
   	def have_to_be_admin
-  	    (redirect_to(root_path, alert: "Not allowed yet") unless current_user.admin?) if current_user
+  	    (redirect_to(root_path, alert: "Not allowed yet.") unless current_user.admin?) if current_user
   	end
+
+    def set_flash_message(message, type)
+        flash[type.to_sym] = message
+    end
 
 end
