@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/vinicius/projects/evorav3/config/environment.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/vinicius/projects/evorav3/config/application.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/application.rb": [
         1,
         null,
         1,
@@ -89,7 +89,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/config/boot.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/boot.rb": [
         1,
         null,
         null,
@@ -97,7 +97,7 @@
         null,
         1
       ],
-      "/home/vinicius/projects/evorav3/config/environments/test.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/environments/test.rb": [
         1,
         null,
         null,
@@ -136,7 +136,7 @@
         1,
         null
       ],
-      "/home/vinicius/projects/evorav3/config/initializers/backtrace_silencers.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -145,7 +145,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/config/initializers/devise.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -373,27 +373,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/config/initializers/generators.rb": [
-        1,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -410,14 +389,35 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/config/initializers/mime_types.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/initializers/generators.rb": [
+        1,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/config/initializers/secret_token.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -426,7 +426,7 @@
         null,
         1
       ],
-      "/home/vinicius/projects/evorav3/config/initializers/session_store.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -436,7 +436,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/config/initializers/wrap_parameters.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -452,7 +452,7 @@
         1,
         null
       ],
-      "/home/vinicius/projects/evorav3/config/routes.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/config/routes.rb": [
         1,
         1,
         null,
@@ -478,7 +478,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/models/user.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/models/user.rb": [
         1,
         1,
         null,
@@ -497,7 +497,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/controllers/application_controller.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -508,91 +508,91 @@
         null,
         null,
         1,
+        1,
+        19,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/helpers/arquivos_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/helpers/contratos_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/helpers/lpus_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/helpers/ufs_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/controllers/arquivos_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        4,
+        4,
+        4,
+        null,
+        null,
+        1,
+        5,
+        5,
+        5,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        11,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/models/arquivo.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         1,
         0,
         null,
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/helpers/arquivos_helper.rb": [
-        1,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/helpers/contratos_helper.rb": [
-        1,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/helpers/lpus_helper.rb": [
-        1,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/helpers/ufs_helper.rb": [
-        1,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/controllers/arquivos_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/models/arquivo.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/uploaders/file_uploader.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/uploaders/file_uploader.rb": [
         null,
         null,
         1,
@@ -612,7 +612,7 @@
         null,
         null,
         1,
-        0,
+        27,
         null,
         null,
         null,
@@ -649,7 +649,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/controllers/contratos_controller.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/controllers/contratos_controller.rb": [
         1,
         1,
         null,
@@ -684,74 +684,6 @@
         0,
         0,
         null,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/models/contrato.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/controllers/lpus_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
         0,
         null,
         null,
@@ -768,7 +700,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/models/lpu.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/models/contrato.rb": [
         1,
         1,
         1,
@@ -777,23 +709,21 @@
         1,
         0,
         null,
+        null,
+        1,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         null,
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/controllers/reports_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/vinicius/projects/evorav3/app/controllers/ufs_controller.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/controllers/lpus_controller.rb": [
         1,
         1,
         null,
@@ -838,21 +768,91 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/models/uf.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/models/lpu.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/controllers/reports_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/controllers/ufs_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/hjm/Documents/projects/evorav3/app/models/uf.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/models/abrangencia.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/models/abrangencia.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/presenters/arquivos/index_presenter.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/presenters/arquivos/index_presenter.rb": [
         1,
         1,
         null,
@@ -868,7 +868,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/evorav3/app/presenters/lpus/index_presenter.rb": [
+      "C:/Users/hjm/Documents/projects/evorav3/app/presenters/lpus/index_presenter.rb": [
         1,
         1,
         null,
@@ -885,6 +885,6 @@
         null
       ]
     },
-    "timestamp": 1361741973
+    "timestamp": 1361816844
   }
 }
