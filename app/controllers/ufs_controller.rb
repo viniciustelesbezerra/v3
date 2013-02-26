@@ -20,19 +20,19 @@ class UfsController < ApplicationController
     def create
         @uf = Uf.new(params[:uf])
         set_flash_message('Uf was successfully created.','notice') if @uf.save
-        repond_with(@uf)
+        respond_with(@uf)
     end
 
     def update
         @uf = get_uf(params[:id])
         set_flash_message('Uf was successfully updated.','notice') if @uf.update_attributes(params[:uf])
-        repond_with(@uf)
+        respond_with(@uf)
     end
 
     def destroy
         @uf = get_uf(params[:id])
         set_flash_message('Uf was successfully destroyed.','notice') if @uf.destroy
-        repond_with(@uf)
+        respond_with(@uf)
     end
 
     private

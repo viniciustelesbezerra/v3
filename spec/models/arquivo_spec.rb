@@ -44,8 +44,19 @@ describe Arquivo do
 
    	end
 
-      it "Call search" do
-         subject.send(:search,search).should eq("")
+      context "Call search" do
+         let!(:other_arquivo) { FactoryGirl.create(:other_arquivo) }
+
+         it "Returning search values" do
+            params = { search: "arquivos", file_name_arquivos: "week", user_name: "admin" }
+            Arquivo.search(params).should eq([arquivo])
+         end
+
+         it "Returning all values" do
+            params = { search: "" }
+            Arquivo.search(params).should include(arquivo)
+         end
+
       end
 
 end
