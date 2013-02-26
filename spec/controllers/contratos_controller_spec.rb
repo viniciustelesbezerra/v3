@@ -3,6 +3,7 @@ require 'spec_helper'
 describe ContratosController do
   login_admin
   let!(:contrato) { FactoryGirl.create(:contrato) }
+  let!(:uf) { FactoryGirl.create(:uf) }
 
   context "GET index" do
     it "assigns all contrato as @contrato" do
@@ -59,13 +60,13 @@ describe ContratosController do
   context "POST create" do
     context "with valid params" do
       it "assigns a newly created contrato as @contrato" do
-        post :create, contrato: FactoryGirl.attributes_for(:contrato)  
+        post :create, contrato: FactoryGirl.attributes_for(:contrato), ufs: { id: [uf.id] }   
         assigns(:contrato).should be_a(Contrato)
         assigns(:contrato).should be_persisted
       end
 
       it "redirects to the created contrato" do
-        post :create, contrato: FactoryGirl.attributes_for(:contrato)
+        post :create, contrato: FactoryGirl.attributes_for(:contrato), ufs: { id: [uf.id] } 
         response.code.should eq("302")
       end
     end
@@ -92,18 +93,18 @@ describe ContratosController do
     context "with valid params" do
       it "updates the requested contrato" do
         Contrato.any_instance.should_receive(:update_attributes)
-        put :update, id: contrato.to_param, contrato: FactoryGirl.attributes_for(:contrato)
+        put :update, id: contrato.to_param, contrato: FactoryGirl.attributes_for(:contrato), ufs: { id: [uf.id] } 
      end
 
       it "assigns the requested contrato as @contrato" do
-        put :update, id: contrato.to_param, contrato: FactoryGirl.attributes_for(:contrato)
-        flash[:notice].should eq('contrato was successfully updated.')
+        put :update, id: contrato.to_param, contrato: FactoryGirl.attributes_for(:contrato), ufs: { id: [uf.id] } 
+        flash[:notice].should eq('Contrato was successfully updated.')
         assigns(:contrato).should eq(contrato)
       end
 
       it "redirects to the contrato" do
-        put :update, id: contrato.to_param, contrato: FactoryGirl.attributes_for(:contrato)
-        flash[:notice].should eq('contrato was successfully updated.')
+        put :update, id: contrato.to_param, contrato: FactoryGirl.attributes_for(:contrato), ufs: { id: [uf.id] } 
+        flash[:notice].should eq('Contrato was successfully updated.')
         response.should redirect_to(contrato)
       end
     end

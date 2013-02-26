@@ -4,6 +4,7 @@ class Contrato < ActiveRecord::Base
   	attr_accessible :comprador_responsavel, :fornecedor, :numero
 
   	def create_ufs_relation!(ufs_ids)
+        puts ufs_ids.inspect
       	ufs_ids.each{ |id_uf| self.ufs.push(Uf.find(id_uf)) }
   	end
 
