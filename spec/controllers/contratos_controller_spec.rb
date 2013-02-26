@@ -4,6 +4,7 @@ describe ContratosController do
   login_admin
   let!(:contrato) { FactoryGirl.create(:contrato) }
   let!(:uf) { FactoryGirl.create(:uf) }
+  let!(:other_uf) { FactoryGirl.create(:uf) }
 
   context "GET index" do
     it "assigns all contrato as @contrato" do
@@ -107,6 +108,14 @@ describe ContratosController do
         flash[:notice].should eq('Contrato was successfully updated.')
         response.should redirect_to(contrato)
       end
+
+      context "Destroy relation" do 
+        it "Get one more relation and destroy" do
+          put :update, id: contrato.to_param, contrato: FactoryGirl.attributes_for(:contrato), ufs: { id: [uf.id, other_uf.id] }
+          put :update, id: contrato.to_param, contrato: FactoryGirl.attributes_for(:contrato), ufs: { id: [uf.id] }
+        end
+      end
+
     end
 
     context "with invalid params" do
