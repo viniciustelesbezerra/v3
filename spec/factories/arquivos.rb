@@ -7,7 +7,7 @@ FactoryGirl.define do
         em_uso true
         carregado_evora true
         data_carregado_evora "2013-02-23 14:32:04"
-        image { File.open("#{Rails.root}/public/uploads/arquivo/image/1/week4.js") }
+        image { File.open("#{Rails.root}/public/uploads/arquivo/image/2/week4.js") }
 
         trait :invalid do
         end
