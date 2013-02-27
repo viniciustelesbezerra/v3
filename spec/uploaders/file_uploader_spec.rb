@@ -28,7 +28,7 @@ describe FileUploader do
   end
 
   it "should make the image readable only to the owner and not executable" do
-    @uploader.should have_permissions(0600)
+    @uploader.should have_permissions('0600')
   end
   
 end

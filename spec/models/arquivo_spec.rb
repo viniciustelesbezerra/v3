@@ -15,9 +15,10 @@ describe Arquivo do
    	context "Attribute validations" do
    		array_presences_and_acssible = [:carregado_evora, :data_carregado_evora, :em_uso, :tipo, :user_id, :image]
 
-   		context "Mass-assignment Allowed" do
+   		context "Mass-assignment allowed and should de present" do
    			array_presences_and_acssible.each do |attr|
 	 			   it { arquivo.should allow_mass_assignment_of(attr) }
+               it { arquivo.should validate_presence_of(attr) }
 	 		   end
 
    		end
@@ -27,13 +28,6 @@ describe Arquivo do
 	 			   it { arquivo.should_not allow_mass_assignment_of(attr) }
 	 		   end
    		end
-
-	      context "Presence of Validated" do
-	   		array_presences_and_acssible.each do |attr|
-				  it { arquivo.should allow_mass_assignment_of(attr) }
-			   end
-
-	   	end
 
 	   	context "Not-validated" do
 	   		[:created_at, :updated_at].each do |attr|
