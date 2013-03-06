@@ -8,12 +8,12 @@ group :assets do
   	gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', ">= 2.2.1"
 gem "pg", ">= 0.14.1"
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "devise", ">= 2.2.3"
-gem "carrierwave"
-gem "cancan"
+gem "carrierwave", ">= 0.8.0"
+gem "cancan", ">= 1.6.9"
 
 group :development do
 	gem "quiet_assets", ">= 1.0.1"
@@ -27,10 +27,10 @@ group :test do
 	gem "capybara", ">= 2.0.2"
 	gem "database_cleaner", ">= 0.9.1"
 	gem "email_spec", ">= 1.4.0"
-  	gem 'factory_girl'
+  	gem 'factory_girl', ">= 4.2.0"
 	gem "factory_girl_rails", ">= 4.2.0"
-  	gem 'simplecov', :require => false
- 	gem 'shoulda-matchers'
-  	gem 'launchy'
-  	gem 'jasmine'
+  	gem 'simplecov', ">= 0.7.1", require: false
+ 	gem 'shoulda-matchers', ">= 1.4.2"
+  	gem 'launchy', ">= 2.2.0"
+  	gem 'jasmine', ">= 1.3.1"
 end
