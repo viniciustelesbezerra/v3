@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
   respond_to :html, :json
 	
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:alert] = exception.message
-    redirect_to root_url
+    redirect_to root_url, alert: exception.message
   end
 
   def index
