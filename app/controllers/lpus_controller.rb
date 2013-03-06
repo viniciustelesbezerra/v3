@@ -1,6 +1,7 @@
 class LpusController < ApplicationController
     before_filter :have_to_be_admin
-
+    load_and_authorize_resource
+    
     def index
         @lpus = Lpu.includes(:arquivo).all
     end

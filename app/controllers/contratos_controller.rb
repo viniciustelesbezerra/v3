@@ -1,6 +1,7 @@
 class ContratosController < ApplicationController
     before_filter :have_to_be_admin
-
+    load_and_authorize_resource
+    
     def index
         @contratos = Contrato.all
     end

@@ -12,7 +12,8 @@ gem 'jquery-rails'
 gem "pg", ">= 0.14.1"
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "devise", ">= 2.2.3"
-gem 'carrierwave'
+gem "carrierwave"
+gem "cancan"
 
 group :development do
 	gem "quiet_assets", ">= 1.0.1"
