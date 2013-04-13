@@ -19,8 +19,8 @@ development:
   pool: 5
   host: localhost
   port: 5432
-  username: postgres
-  password: 
+  username: root
+  password: root
   #template: template0
 
   # Connect on a TCP socket. Omitted by default since the client uses a

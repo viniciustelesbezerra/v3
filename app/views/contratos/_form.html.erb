@@ -25,7 +25,7 @@
   </div>
 
   <% Uf.find_each do |uf| %>
-    <%= check_box_tag "ufs[id][]", uf.id, @contrato.ufs.include?(uf) %>
+    <%= check_box_tag "contrato[uf_ids][]", uf.id, @contrato.ufs.include?(uf) %>
     <%= uf.name %> 
   <% end %>
 

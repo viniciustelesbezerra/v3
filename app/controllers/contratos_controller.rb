@@ -1,5 +1,4 @@
 class ContratosController < ApplicationController
-    before_filter :have_to_be_admin
     load_and_authorize_resource
     
     def index
@@ -21,7 +20,6 @@ class ContratosController < ApplicationController
     def create
         @contrato = Contrato.new(params[:contrato])
         if @contrato.save
-            @contrato.create_ufs_relation!(params[:ufs][:id])
             set_flash_message('Contrato was successfully created.','notice')
         end
         respond_with(@contrato)
@@ -30,7 +28,6 @@ class ContratosController < ApplicationController
     def update
         @contrato = get_contrato(params[:id])
         if @contrato.update_attributes(params[:contrato])
-            @contrato.update_ufs_relation!(params[:ufs][:id])
             set_flash_message('Contrato was successfully updated.','notice')
         end
         respond_with(@contrato)
