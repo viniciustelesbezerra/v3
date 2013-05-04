@@ -12,6 +12,7 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+# start with homebrew pg_ctl -D /usr/local/var/postgres/data -l /usr/local/var/postgres/data/server.log start
 development:
   adapter: postgresql
   encoding: unicode
@@ -19,7 +20,7 @@ development:
   pool: 5
   host: localhost
   port: 5432
-  username: postgres
+  username: viniciusteles
   password: 
   #template: template0
 
@@ -48,6 +49,6 @@ test:
   pool: 5
   host: localhost
   port: 5432
-  username: postgres
+  username: viniciusteles
   password: 
   #template: template0

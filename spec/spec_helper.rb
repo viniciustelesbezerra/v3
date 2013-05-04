@@ -68,6 +68,7 @@ RSpec.configure do |config|
 
     config.include Capybara::DSL, :type => :request
     config.include FactoryGirl::Syntax::Methods
+
     config.before(:each) do
       DatabaseCleaner.start
     end
