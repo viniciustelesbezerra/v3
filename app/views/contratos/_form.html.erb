@@ -25,12 +25,11 @@
   </div>
 
   <% Uf.find_each do |uf| %>
-    <%= check_box_tag "ufs[id][]", uf.id, @contrato.ufs.include?(uf) %>
+    <%= check_box_tag "contrato[uf_ids][]", uf.id, @contrato.ufs.include?(uf) %>
     <%= uf.name %> 
   <% end %>
 
   <div class="actions">
     <div><input name="commit" type="submit" value="Submit" class="btn btn-primary"></div>
-    <%#= f.submit %>
   </div>
 <% end %>

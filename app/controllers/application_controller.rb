@@ -12,10 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-  def have_to_be_admin
-    #(redirect_to(root_path, alert: "Not allowed yet.") unless current_user.admin?) if current_user
-  end
-
   def set_flash_message(message, type)
     flash[type.to_sym] = message
   end
