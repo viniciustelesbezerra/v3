@@ -20,13 +20,8 @@ development:
   pool: 5
   host: localhost
   port: 5432
-<<<<<<< HEAD
   username: viniciusteles
   password: 
-=======
-  username: root
-  password: root
->>>>>>> 0cce408f67e3188c48e147198075382b75b51d5a
   #template: template0
 
   # Connect on a TCP socket. Omitted by default since the client uses a
